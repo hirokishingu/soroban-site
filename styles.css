@@ -1,0 +1,122 @@
+:root {
+  --paper: #f6f0e4;
+  --card: #fffcf6;
+  --ink: #2a2420;
+  --ink-soft: #6b5e54;
+  --hairline: #e6dccb;
+  --accent: #d9472b;
+  --link: #b0351c;
+  --radius: 18px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #1a1714;
+    --card: #27231f;
+    --ink: #f3eee6;
+    --ink-soft: #b3a89c;
+    --hairline: #3a342e;
+    --link: #f08a6e;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.65 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+}
+
+h1, h2, h3, .brand {
+  font-family: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.2;
+}
+
+a { color: var(--link); text-underline-offset: 2px; }
+a:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+
+.topbar { border-bottom: 1px solid var(--hairline); }
+.topbar .inner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; font-size: 17px; white-space: nowrap; color: var(--ink); text-decoration: none; }
+.brand img { border-radius: 22.37%; }
+.topbar nav { display: flex; gap: 6px; }
+.topbar nav a { color: var(--ink); text-decoration: none; font-weight: 600; padding: 10px; border-radius: 10px; }
+.topbar nav a:hover { background: var(--hairline); }
+
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 20px 48px; }
+
+.hero { text-align: center; padding: 44px 0 28px; }
+.app-icon { width: 120px; height: 120px; border-radius: 22.37%; box-shadow: 0 8px 24px rgba(74, 42, 19, 0.22); }
+.hero h1 { margin: 20px 0 6px; font-size: 40px; font-weight: 800; }
+.tagline { margin: 0 auto; max-width: 30em; font-size: 20px; color: var(--ink-soft); }
+.pill {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 18px;
+  border: 1.5px solid var(--hairline);
+  border-radius: 999px;
+  background: var(--card);
+  font-weight: 700;
+}
+
+h2 { margin: 40px 0 12px; font-size: 26px; font-weight: 800; }
+h3 { margin: 0 0 6px; font-size: 19px; font-weight: 800; }
+
+.cards { display: grid; gap: 14px; grid-template-columns: 1fr; }
+@media (min-width: 640px) { .cards { grid-template-columns: repeat(3, 1fr); } }
+.card {
+  background: var(--card);
+  border: 1.5px solid var(--hairline);
+  border-radius: var(--radius);
+  padding: 18px 18px 16px;
+}
+.card p { margin: 0; color: var(--ink-soft); }
+
+.list { padding-left: 1.2em; }
+.list li { margin: 8px 0; }
+
+.shots { display: flex; gap: 14px; overflow-x: auto; padding: 4px 0 12px; -webkit-overflow-scrolling: touch; }
+.shots img { height: 420px; width: auto; border-radius: 16px; border: 1px solid var(--hairline); flex: none; }
+
+.legal h1 { font-size: 34px; font-weight: 800; margin: 36px 0 4px; }
+.legal .eff { margin: 0 0 20px; color: var(--ink-soft); }
+.legal h2 { font-size: 22px; margin: 32px 0 8px; }
+.legal ul { padding-left: 1.2em; }
+.legal li { margin: 6px 0; }
+.backlink { display: inline-block; margin-top: 20px; padding: 8px 0; font-weight: 600; text-decoration: none; }
+
+details {
+  background: var(--card);
+  border: 1.5px solid var(--hairline);
+  border-radius: 14px;
+  margin: 10px 0;
+}
+summary { cursor: pointer; padding: 14px 16px; font-weight: 700; min-height: 48px; }
+details[open] summary { border-bottom: 1px solid var(--hairline); }
+details p { margin: 0; padding: 12px 16px 14px; }
+
+.contact {
+  background: var(--card);
+  border: 1.5px solid var(--hairline);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  margin: 18px 0 8px;
+}
+.contact p { margin: 4px 0; }
+
+footer { border-top: 1px solid var(--hairline); color: var(--ink-soft); font-size: 14px; }
+footer .inner { max-width: 760px; margin: 0 auto; padding: 20px; }
+footer a { color: var(--ink-soft); }
+footer p { margin: 4px 0; }
