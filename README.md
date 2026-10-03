@@ -1,6 +1,6 @@
 # soroban-site
 
-Soroban Sensei (日本語は「そろばんの道」。2026-10-03 に Soroban Friends から改名) の公開ページ。App Store Connect の「プライバシーポリシー URL」と「サポート URL」に入れるもの。
+Soroban Path (日本語は「そろばんの道」。2026-10-03 に Soroban Friends から改名) の公開ページ。App Store Connect の「プライバシーポリシー URL」と「サポート URL」に入れるもの。
 アプリの `Legal.swift` (privacyPolicyURL / supportURL) も同じ場所を指す。
 
 | ページ | 役割 |
@@ -25,7 +25,7 @@ gh api -X POST repos/hirokishingu/soroban-site/pages -f 'source[branch]=main' -f
 
 ## 店名を変えたとき
 
-`Soroban Sensei` の表記を全ページで置き換える (`grep -rn "Soroban Sensei" .`)。日本語は `そろばんの道` (`grep -rn "そろばんの道" ja`)。
+`Soroban Path` の表記を全ページで置き換える (`grep -rn "Soroban Path" .`)。日本語は `そろばんの道` (`grep -rn "そろばんの道" ja`)。
 support.html の「購読の解約」の説明にも、App Store に出る名前が入っている (日本語版にも)。
 
 ## 確認のしかた
