@@ -8,6 +8,8 @@ Soroban Friends (仮の店名。未確定) の公開ページ。App Store Connec
 | `index.html` | アプリの紹介 (マーケティング URL に使える) |
 | `privacy.html` | プライバシーポリシー。アプリの中の説明 (`PrivacyView.swift`) と食い違わせない |
 | `support.html` | サポート・よくある質問・問い合わせ先 |
+| `ja/index.html` `ja/privacy.html` `ja/support.html` | 上の 3 ページの日本語版 (端末の言語が日本語のとき、アプリは `ja/` を開く。ストアの日本語の欄の URL も `ja/`)。どのページにも、もう一方の言語へのリンクがある |
+| `img/ja/shot-*.jpg` | 日本語の紹介ページのスクリーンショット (396×860。`store/ja/screenshots/iphone-6.9/` の 01・02・03・04・08 を縮めたもの) |
 
 規約は Apple 標準の EULA を使うので、ここには置かない。
 
@@ -23,8 +25,8 @@ gh api -X POST repos/hirokishingu/soroban-site/pages -f 'source[branch]=main' -f
 
 ## 店名を変えたとき
 
-`Soroban Friends` の表記を全ページで置き換える (`grep -rn "Soroban Friends" .`)。
-support.html の「購読の解約」の説明にも、App Store に出る名前が入っている。
+`Soroban Friends` の表記を全ページで置き換える (`grep -rn "Soroban Friends" .`)。日本語は `そろばんフレンズ` (`grep -rn "そろばんフレンズ" ja`)。
+support.html の「購読の解約」の説明にも、App Store に出る名前が入っている (日本語版にも)。
 
 ## 確認のしかた
 
